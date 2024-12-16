@@ -3,26 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet"  href="style.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Outfit:400,700&amp;lang=en" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --background-color: #d5e1ef;
+    }
+    /* Reset browser defaults */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --background-color: #d5e1ef;
+    }
+
+    body {
+      background-color: var(--background-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Horizontally centers content */
+      justify-content: center; /* Centers content vertically */
+      min-height: 100vh; /* Ensures full screen height */
+      position: relative;
+    }
+
+    .container {
+      position: relative;
+      top: -50px; /* Slight upward adjustment for visual alignment */
+    }
+
+    .card {
+      width: 320px;
+      height: 500px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 15px;
+    }
+
+    .card > img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card > h1 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin: 20px 0 10px 0;
+      color: #333;
+    }
+
+    .card > p {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #666;
+      margin: 10px 0;
+    }
+
+    .attribution {
+      font-size: 11px;
+      color: #666;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+    }
+
   </style>
 </head>
+
 <body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<div class="container">
+  <div class="card">
+    <img src="./images/image-qr-code.png" alt="QR Code">
+    <h1>Improve your front-end skills by building projects</h1>
+    <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
   </div>
+</div>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Andrew</a>.
+</div>
 </body>
+
+
 </html>
