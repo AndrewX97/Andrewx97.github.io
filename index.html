@@ -3,15 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet"  href="style.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Outfit:400,700&amp;lang=en" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | QR code component</title>
+  <style>
+    :root {
+    --background-color: #d5e1ef;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .container {
+    position: relative;
+    top: -50px;
+  }
+
+  .card {
+    width: 320px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+  }
+
+  #image{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  #text1{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 20px 0 10px 0;
+    color: #333;
+  }
+
+  #text2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+  }
+  </style>
 </head>
 <body>
 <div class="container">
   <div class="card">
-    <img id="image"src="./images/image-qr-code.png" alt="QR Code">
+    <img id="image" src="./images/image-qr-code.png" alt="QR Code">
     <h1 id="text1">Improve your front-end skills by building projects</h1>
     <p id="text2">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
   </div>
